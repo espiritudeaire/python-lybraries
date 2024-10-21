@@ -1,0 +1,377 @@
+[
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "os.path",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os.path",
+        "description": "os.path",
+        "detail": "os.path",
+        "documentation": {}
+    },
+    {
+        "label": "pkgutil",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pkgutil",
+        "description": "pkgutil",
+        "detail": "pkgutil",
+        "documentation": {}
+    },
+    {
+        "label": "shutil",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "shutil",
+        "description": "shutil",
+        "detail": "shutil",
+        "documentation": {}
+    },
+    {
+        "label": "tempfile",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tempfile",
+        "description": "tempfile",
+        "detail": "tempfile",
+        "documentation": {}
+    },
+    {
+        "label": "argparse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "argparse",
+        "description": "argparse",
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "importlib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "importlib",
+        "description": "importlib",
+        "detail": "importlib",
+        "documentation": {}
+    },
+    {
+        "label": "b85decode",
+        "importPath": "base64",
+        "description": "base64",
+        "isExtraImport": true,
+        "detail": "base64",
+        "documentation": {}
+    },
+    {
+        "label": "scipy.io",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "scipy.io",
+        "description": "scipy.io",
+        "detail": "scipy.io",
+        "documentation": {}
+    },
+    {
+        "label": "loadmat",
+        "importPath": "scipy.io",
+        "description": "scipy.io",
+        "isExtraImport": true,
+        "detail": "scipy.io",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.pyplot",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.pyplot",
+        "description": "matplotlib.pyplot",
+        "detail": "matplotlib.pyplot",
+        "documentation": {}
+    },
+    {
+        "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "Paciente",
+        "kind": 6,
+        "importPath": "ejercicio",
+        "description": "ejercicio",
+        "peekOfCode": "class Paciente:\n    def __init__(self, nombre, cedula, genero, servicio):\n        # Atributos privados del paciente\n        self.__nombre = nombre\n        self.__cedula = cedula\n        self.__genero = genero\n        self.__servicio = servicio\n    # Método para obtener la cédula del paciente\n    def get_cedula(self):\n        return self.__cedula",
+        "detail": "ejercicio",
+        "documentation": {}
+    },
+    {
+        "label": "Sistema",
+        "kind": 6,
+        "importPath": "ejercicio",
+        "description": "ejercicio",
+        "peekOfCode": "class Sistema:\n    def __init__(self):\n        # Lista privada para almacenar los objetos de tipo Paciente\n        self.__lista_pacientes = []\n    # Método para ingresar un nuevo paciente al sistema\n    def ingresar_paciente(self, paciente):\n        # Agregar el paciente a la lista\n        self.__lista_pacientes.append(paciente)\n        return True\n    # Método para buscar un paciente por su cédula",
+        "detail": "ejercicio",
+        "documentation": {}
+    },
+    {
+        "label": "fill_menu_servicio",
+        "kind": 2,
+        "importPath": "ejercicio",
+        "description": "ejercicio",
+        "peekOfCode": "def fill_menu_servicio(lista_servicios):\n    menu = \"Servicios disponibles:\\n\"\n    # Enumerate agrega un contador que se incrementa con cada iteración\n    for i, m in enumerate(lista_servicios):\n        menu += f\"{i}: {m} \\n\"  # Concatena cada servicio con su índice en el menú\n    return menu  # Retorna el menú como una cadena\n# Función para regresar al menú principal, esperando que el usuario presione \"0\"\ndef opcion_regresar_menu_principal():\n    while True:\n        o = input(\"Presione 0 (cero) para regresar al menú principal\\n\")",
+        "detail": "ejercicio",
+        "documentation": {}
+    },
+    {
+        "label": "opcion_regresar_menu_principal",
+        "kind": 2,
+        "importPath": "ejercicio",
+        "description": "ejercicio",
+        "peekOfCode": "def opcion_regresar_menu_principal():\n    while True:\n        o = input(\"Presione 0 (cero) para regresar al menú principal\\n\")\n        if o == \"0\":\n            break  # Sale del bucle si el usuario presiona \"0\"\n# Función para validar si una cédula es numérica\ndef validar_cedula(ced):\n    if ced.isdigit():  # Verifica si la cédula contiene solo dígitos\n        return True\n    print(\"Error: La cédula deben ser dígitos\")  # Muestra un error si no es numérica",
+        "detail": "ejercicio",
+        "documentation": {}
+    },
+    {
+        "label": "validar_cedula",
+        "kind": 2,
+        "importPath": "ejercicio",
+        "description": "ejercicio",
+        "peekOfCode": "def validar_cedula(ced):\n    if ced.isdigit():  # Verifica si la cédula contiene solo dígitos\n        return True\n    print(\"Error: La cédula deben ser dígitos\")  # Muestra un error si no es numérica\n    return False\n# Función principal que ejecuta el programa\ndef main():\n    # Crea una instancia de la clase Sistema\n    sis = Sistema()\n    # Se crean algunos pacientes y se agregan al Sistema, en la lista de pacientes",
+        "detail": "ejercicio",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "ejercicio",
+        "description": "ejercicio",
+        "peekOfCode": "def main():\n    # Crea una instancia de la clase Sistema\n    sis = Sistema()\n    # Se crean algunos pacientes y se agregan al Sistema, en la lista de pacientes\n    sis.ingresar_paciente(Paciente(\"Pedro Gómez\", 123456, \"Masculino\", \"Hospitalización\"))\n    sis.ingresar_paciente(Paciente(\"Laura Restrepo\", 123457, \"Femenino\", \"Hospitalización\"))\n    sis.ingresar_paciente(Paciente(\"Miguel Mejía\", 123458, \"Masculino\", \"Laboratorio\"))\n    flag = True  # Bandera para controlar el flujo del programa\n    # Lista de servicios válidos\n    servicios_validos = [",
+        "detail": "ejercicio",
+        "documentation": {}
+    },
+    {
+        "label": "include_setuptools",
+        "kind": 2,
+        "importPath": "get-pip",
+        "description": "get-pip",
+        "peekOfCode": "def include_setuptools(args):\n    \"\"\"\n    Install setuptools only if absent, not excluded and when using Python <3.12.\n    \"\"\"\n    cli = not args.no_setuptools\n    env = not os.environ.get(\"PIP_NO_SETUPTOOLS\")\n    absent = not importlib.util.find_spec(\"setuptools\")\n    python_lt_3_12 = this_python < (3, 12)\n    return cli and env and absent and python_lt_3_12\ndef include_wheel(args):",
+        "detail": "get-pip",
+        "documentation": {}
+    },
+    {
+        "label": "include_wheel",
+        "kind": 2,
+        "importPath": "get-pip",
+        "description": "get-pip",
+        "peekOfCode": "def include_wheel(args):\n    \"\"\"\n    Install wheel only if absent, not excluded and when using Python <3.12.\n    \"\"\"\n    cli = not args.no_wheel\n    env = not os.environ.get(\"PIP_NO_WHEEL\")\n    absent = not importlib.util.find_spec(\"wheel\")\n    python_lt_3_12 = this_python < (3, 12)\n    return cli and env and absent and python_lt_3_12\ndef determine_pip_install_arguments():",
+        "detail": "get-pip",
+        "documentation": {}
+    },
+    {
+        "label": "determine_pip_install_arguments",
+        "kind": 2,
+        "importPath": "get-pip",
+        "description": "get-pip",
+        "peekOfCode": "def determine_pip_install_arguments():\n    pre_parser = argparse.ArgumentParser()\n    pre_parser.add_argument(\"--no-setuptools\", action=\"store_true\")\n    pre_parser.add_argument(\"--no-wheel\", action=\"store_true\")\n    pre, args = pre_parser.parse_known_args()\n    args.append(\"pip\")\n    if include_setuptools(pre):\n        args.append(\"setuptools\")\n    if include_wheel(pre):\n        args.append(\"wheel\")",
+        "detail": "get-pip",
+        "documentation": {}
+    },
+    {
+        "label": "monkeypatch_for_cert",
+        "kind": 2,
+        "importPath": "get-pip",
+        "description": "get-pip",
+        "peekOfCode": "def monkeypatch_for_cert(tmpdir):\n    \"\"\"Patches `pip install` to provide default certificate with the lowest priority.\n    This ensures that the bundled certificates are used unless the user specifies a\n    custom cert via any of pip's option passing mechanisms (config, env-var, CLI).\n    A monkeypatch is the easiest way to achieve this, without messing too much with\n    the rest of pip's internals.\n    \"\"\"\n    from pip._internal.commands.install import InstallCommand\n    # We want to be using the internal certificates.\n    cert_path = os.path.join(tmpdir, \"cacert.pem\")",
+        "detail": "get-pip",
+        "documentation": {}
+    },
+    {
+        "label": "bootstrap",
+        "kind": 2,
+        "importPath": "get-pip",
+        "description": "get-pip",
+        "peekOfCode": "def bootstrap(tmpdir):\n    monkeypatch_for_cert(tmpdir)\n    # Execute the included pip and use it to install the latest pip and\n    # any user-requested packages from PyPI.\n    from pip._internal.cli.main import main as pip_entry_point\n    args = determine_pip_install_arguments()\n    sys.exit(pip_entry_point(args))\ndef main():\n    tmpdir = None\n    try:",
+        "detail": "get-pip",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "get-pip",
+        "description": "get-pip",
+        "peekOfCode": "def main():\n    tmpdir = None\n    try:\n        # Create a temporary working directory\n        tmpdir = tempfile.mkdtemp()\n        # Unpack the zipfile into the temporary directory\n        pip_zip = os.path.join(tmpdir, \"pip.zip\")\n        with open(pip_zip, \"wb\") as fp:\n            fp.write(b85decode(DATA.replace(b\"\\n\", b\"\")))\n        # Add the zipfile to sys.path so that we can import it",
+        "detail": "get-pip",
+        "documentation": {}
+    },
+    {
+        "label": "this_python",
+        "kind": 5,
+        "importPath": "get-pip",
+        "description": "get-pip",
+        "peekOfCode": "this_python = sys.version_info[:2]\nmin_version = (3, 8)\nif this_python < min_version:\n    message_parts = [\n        \"This script does not work on Python {}.{}.\".format(*this_python),\n        \"The minimum supported Python version is {}.{}.\".format(*min_version),\n        \"Please use https://bootstrap.pypa.io/pip/{}.{}/get-pip.py instead.\".format(*this_python),\n    ]\n    print(\"ERROR: \" + \" \".join(message_parts))\n    sys.exit(1)",
+        "detail": "get-pip",
+        "documentation": {}
+    },
+    {
+        "label": "min_version",
+        "kind": 5,
+        "importPath": "get-pip",
+        "description": "get-pip",
+        "peekOfCode": "min_version = (3, 8)\nif this_python < min_version:\n    message_parts = [\n        \"This script does not work on Python {}.{}.\".format(*this_python),\n        \"The minimum supported Python version is {}.{}.\".format(*min_version),\n        \"Please use https://bootstrap.pypa.io/pip/{}.{}/get-pip.py instead.\".format(*this_python),\n    ]\n    print(\"ERROR: \" + \" \".join(message_parts))\n    sys.exit(1)\nimport os.path",
+        "detail": "get-pip",
+        "documentation": {}
+    },
+    {
+        "label": "DATA",
+        "kind": 5,
+        "importPath": "get-pip",
+        "description": "get-pip",
+        "peekOfCode": "DATA = b\"\"\"\nP)h>@6aWAK2mofX{8+Vkj=%N*003hF000jF003}la4%n9X>MtBUtcb8c|B0UYQr!Lz56RfE?c3qp%k_\nSHrQn_7~2lJl@i=UNd$>)BxNOkKc^)X0-?v#)8n-qN6<M@=zzu)S>cmJxA2{mV(^18RrQA~d8sORfnv\n9}yTTaLU<;$CaPPU3^2R?b=Lb<f9y9wZ2He2ID^SqVK(3-FetQzg?ZW~i=PP*o`G6RP8AkL$p^XfaAe\n?4Ml<oxLIY1qQ!~sESrlexcMesdSebdnOJv6AE2HAojLa&;nbgm=qr<1MY=+d0L%bJcvCKUI$e}1y7v\n&(FkNHW7#t2;Ysmb4g@=M*z4YgW~neM-nzD~vjExPg~sHs&8tO9KQH000080A{lMSa0{Q*SrA$09FG4\n01p5F0B~t=FJE76VQFq(UoLQYT~bSL+b|5i`&SU@!Oq~iIS)&L9d|8u8wNv=>6nNu38Ea&`}HFgyJ@G\nB9{e8sD4K$g2|O2c-|@;t@dR%;`5Qu6f^i+#IYx8|79X$VF3?d#n|xfMkA8wQAoLVDffU76;J#O)CYU\ntTKs|(rtOUt}xq0efX64y=-}wYe4gv+Rewsv@!47DzwFn{pMIm#X%sAFClIW>99{f@Za2e3a^UYte1H\n%y3G<XNkQ|9}&5xy4m@b>HUTlK2Lp_T}m3nsgC)$#bX09kug6MU#nM~&r24-0~c2yu2!TgU+z6-O~;x",
+        "detail": "get-pip",
+        "documentation": {}
+    },
+    {
+        "label": "EEGSignal",
+        "kind": 6,
+        "importPath": "pruebas",
+        "description": "pruebas",
+        "peekOfCode": "class EEGSignal:\n    def __init__(self, file_path):\n        self.data = loadmat (file_path)['data']\n        self.original_data = self.data.copy()\n        self.canales, self.tiempo, self.epochs = self.data.shape\n        self.recorte = None\n        self.unificado = None\n        self._tamaño_señal = self.data.size\n        self._dimensiones_señal = self.data.shape\n        self._tamaño_recorte = None",
+        "detail": "pruebas",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 5,
+        "importPath": "pruebas",
+        "description": "pruebas",
+        "peekOfCode": "data = sio.loadmat('S1.mat')['data']\nseñal1 = EEGSignal('S1.mat')\nseñal2 = EEGSignal('S2.mat')\nseñal3 = EEGSignal('S3.mat')\nseñal1.recortar(4,50)\nseñal1.unificar_epocas_del_recorte()\nseñal2.recortar(4,80)\nseñal3.recortar(70,100)\nprint(señal1.get_tamaño_dimensiones())\nprint(señal2.get_tamaño_dimensiones())",
+        "detail": "pruebas",
+        "documentation": {}
+    },
+    {
+        "label": "señal1",
+        "kind": 5,
+        "importPath": "pruebas",
+        "description": "pruebas",
+        "peekOfCode": "señal1 = EEGSignal('S1.mat')\nseñal2 = EEGSignal('S2.mat')\nseñal3 = EEGSignal('S3.mat')\nseñal1.recortar(4,50)\nseñal1.unificar_epocas_del_recorte()\nseñal2.recortar(4,80)\nseñal3.recortar(70,100)\nprint(señal1.get_tamaño_dimensiones())\nprint(señal2.get_tamaño_dimensiones())\nprint(señal3.get_tamaño_dimensiones())",
+        "detail": "pruebas",
+        "documentation": {}
+    },
+    {
+        "label": "señal2",
+        "kind": 5,
+        "importPath": "pruebas",
+        "description": "pruebas",
+        "peekOfCode": "señal2 = EEGSignal('S2.mat')\nseñal3 = EEGSignal('S3.mat')\nseñal1.recortar(4,50)\nseñal1.unificar_epocas_del_recorte()\nseñal2.recortar(4,80)\nseñal3.recortar(70,100)\nprint(señal1.get_tamaño_dimensiones())\nprint(señal2.get_tamaño_dimensiones())\nprint(señal3.get_tamaño_dimensiones())\nprint(señal3.recuperar_señal_original())",
+        "detail": "pruebas",
+        "documentation": {}
+    },
+    {
+        "label": "señal3",
+        "kind": 5,
+        "importPath": "pruebas",
+        "description": "pruebas",
+        "peekOfCode": "señal3 = EEGSignal('S3.mat')\nseñal1.recortar(4,50)\nseñal1.unificar_epocas_del_recorte()\nseñal2.recortar(4,80)\nseñal3.recortar(70,100)\nprint(señal1.get_tamaño_dimensiones())\nprint(señal2.get_tamaño_dimensiones())\nprint(señal3.get_tamaño_dimensiones())\nprint(señal3.recuperar_señal_original())",
+        "detail": "pruebas",
+        "documentation": {}
+    },
+    {
+        "label": "Medicamento",
+        "kind": 6,
+        "importPath": "SistVMultMed",
+        "description": "SistVMultMed",
+        "peekOfCode": "class Medicamento:\n    def __init__(self):\n        self.__nombre = \"\" \n        self.__dosis = 0 \n    def verNombre(self):\n        return self.__nombre \n    def verDosis(self):\n        return self.__dosis \n    def asignarNombre(self,med):\n        self.__nombre = med ",
+        "detail": "SistVMultMed",
+        "documentation": {}
+    },
+    {
+        "label": "Mascota",
+        "kind": 6,
+        "importPath": "SistVMultMed",
+        "description": "SistVMultMed",
+        "peekOfCode": "class Mascota:\n    def __init__(self):\n        self.__nombre= \" \"\n        self.__historia=0\n        self.__tipo=\" \"\n        self.__peso=\" \"\n        self.__fecha_ingreso=date.today()\n        self.__lista_medicamentos=[]\n    def __str__(self) -> str:\n        return f'''",
+        "detail": "SistVMultMed",
+        "documentation": {}
+    },
+    {
+        "label": "sistemaV",
+        "kind": 6,
+        "importPath": "SistVMultMed",
+        "description": "SistVMultMed",
+        "peekOfCode": "class sistemaV:\n    def __init__(self):\n        self.__lista_mascotas = {\n            \"felino\": [],\n            \"canino\": []\n        }\n    def verificarExiste(self,historia):\n        for m in self.__lista_mascotas:\n            for h in self.__lista_mascotas[m]:\n                if historia == h.verHistoria():",
+        "detail": "SistVMultMed",
+        "documentation": {}
+    },
+    {
+        "label": "verificar_existencia_medicamento_en_lista",
+        "kind": 2,
+        "importPath": "SistVMultMed",
+        "description": "SistVMultMed",
+        "peekOfCode": "def verificar_existencia_medicamento_en_lista(lista, nombre_med):\n    for m in lista:\n        if m.verNombre() == nombre_med:\n            return True\n    return False\ndef verificar_tipo_ingresado():\n    while True:\n        tipo = input(\"Ingrese el tipo de mascota (felino o canino): \")\n        if tipo == \"felino\" or tipo == \"canino\":\n            return tipo",
+        "detail": "SistVMultMed",
+        "documentation": {}
+    },
+    {
+        "label": "verificar_tipo_ingresado",
+        "kind": 2,
+        "importPath": "SistVMultMed",
+        "description": "SistVMultMed",
+        "peekOfCode": "def verificar_tipo_ingresado():\n    while True:\n        tipo = input(\"Ingrese el tipo de mascota (felino o canino): \")\n        if tipo == \"felino\" or tipo == \"canino\":\n            return tipo\n        else:\n            print(\"Ha ingresado mal el tipo\")\ndef verificar_numero_ingresado(texto):\n    while True:\n        numero = input(texto)",
+        "detail": "SistVMultMed",
+        "documentation": {}
+    },
+    {
+        "label": "verificar_numero_ingresado",
+        "kind": 2,
+        "importPath": "SistVMultMed",
+        "description": "SistVMultMed",
+        "peekOfCode": "def verificar_numero_ingresado(texto):\n    while True:\n        numero = input(texto)\n        if numero.isdigit():\n            return numero\n        else:\n            print(\"Sólo puede ingresar números\")\ndef validacion_si_no(texto):\n    while True:\n        validacion = input(texto)",
+        "detail": "SistVMultMed",
+        "documentation": {}
+    },
+    {
+        "label": "validacion_si_no",
+        "kind": 2,
+        "importPath": "SistVMultMed",
+        "description": "SistVMultMed",
+        "peekOfCode": "def validacion_si_no(texto):\n    while True:\n        validacion = input(texto)\n        if validacion == \"s\":\n            return True\n        elif validacion == \"n\": \n            return False\n        else:\n            print(\"Sólo puede ingresar 's' para Sí ó 'n' para No\")\ndef opcion_regresar_menu_principal():",
+        "detail": "SistVMultMed",
+        "documentation": {}
+    },
+    {
+        "label": "opcion_regresar_menu_principal",
+        "kind": 2,
+        "importPath": "SistVMultMed",
+        "description": "SistVMultMed",
+        "peekOfCode": "def opcion_regresar_menu_principal():\n    while True:\n        o = input(\"Presione 0 (cero) para regresar al menú principal\\n\")\n        if o == \"0\":\n            break  # Sale del bucle si el usuario presiona \"0\"\ndef main():\n    servicio_hospitalario = sistemaV()\n    med1 = Medicamento()\n    med1.asignarNombre(\"Acetaminofen\")\n    med1.asignarDosis(2)",
+        "detail": "SistVMultMed",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "SistVMultMed",
+        "description": "SistVMultMed",
+        "peekOfCode": "def main():\n    servicio_hospitalario = sistemaV()\n    med1 = Medicamento()\n    med1.asignarNombre(\"Acetaminofen\")\n    med1.asignarDosis(2)\n    med2 = Medicamento()\n    med2.asignarNombre(\"Ibuprofeno\")\n    med2.asignarDosis(2)\n    med3 = Medicamento()\n    med3.asignarNombre(\"Dolex\")",
+        "detail": "SistVMultMed",
+        "documentation": {}
+    }
+]
